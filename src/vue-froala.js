@@ -246,7 +246,7 @@ export default (Vue, Options = {}) => {
 
         if (this.hasSpecialTag) {
 
-          var attributeNodes = this.$el[0].attributes;
+          var attributeNodes = this.$el.attributes;
           var attrs = {};
 
           for (var i = 0; i < attributeNodes.length; i++ ) {
@@ -258,8 +258,8 @@ export default (Vue, Options = {}) => {
             attrs[attrName] = attributeNodes[i].value;
           }
 
-          if (this.$el[0].innerHTML) {
-            attrs[this.INNER_HTML_ATTR] = this.$el[0].innerHTML;
+          if (this.$el.innerHTML) {
+            attrs[this.INNER_HTML_ATTR] = this.$el.innerHTML;
           }
 
           modelContent = attrs;
